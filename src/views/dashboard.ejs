@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/head') %>
+    <title>Dashboard | AuthApp</title>
+</head>
+<body class="app-page">
+    <%- include('partials/navbar') %>
+
+    <main>
+        <div class="container" style="margin-top: 30px;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card z-depth-3 welcome-card">
+                        <div class="card-content">
+                            <div class="row valign-wrapper">
+                                <div class="col s12 m3 center-align">
+                                    <div class="welcome-avatar">
+                                        <i class="material-icons" style="font-size: 80px; color: var(--primary);">emoji_people</i>
+                                    </div>
+                                </div>
+                                <div class="col s12 m9">
+                                    <h4 class="welcome-title">¡Bienvenido, <span id="dash-name"></span>!</h4>
+                                    <p class="grey-text text-darken-1" style="font-size: 1.1rem;">Este es tu panel de usuario. Aquí puedes ver un resumen de tu cuenta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card z-depth-2 info-card">
+                        <div class="card-content center-align">
+                            <i class="material-icons info-card-icon">email</i>
+                            <h6 class="grey-text">Email</h6>
+                            <p id="dash-email" class="info-value"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card z-depth-2 info-card">
+                        <div class="card-content center-align">
+                            <i class="material-icons info-card-icon">phone</i>
+                            <h6 class="grey-text">Teléfono</h6>
+                            <p id="dash-phone" class="info-value"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card z-depth-2 info-card">
+                        <div class="card-content center-align">
+                            <i class="material-icons info-card-icon">cake</i>
+                            <h6 class="grey-text">Edad</h6>
+                            <p id="dash-age" class="info-value"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card z-depth-2 info-card">
+                        <div class="card-content center-align">
+                            <i class="material-icons info-card-icon">home</i>
+                            <h6 class="grey-text">Dirección</h6>
+                            <p id="dash-address" class="info-value"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card z-depth-2 info-card">
+                        <div class="card-content center-align">
+                            <i class="material-icons info-card-icon">security</i>
+                            <h6 class="grey-text">Roles</h6>
+                            <p id="dash-roles" class="info-value"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row center-align">
+                <a href="/profile" class="btn btn-large waves-effect waves-light btn-gradient">
+                    <i class="material-icons left">edit</i> Editar Mi Perfil
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/scripts') %>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/head') %>
+    <title>403 - Acceso Denegado | AuthApp</title>
+</head>
+<body class="error-page">
+    <%- include('partials/navbar') %>
+
+    <main>
+        <div class="container">
+            <div class="row valign-wrapper" style="min-height: 80vh;">
+                <div class="col s12 center-align">
+                    <div class="error-content">
+                        <i class="material-icons error-icon" style="color: #e74c3c;">block</i>
+                        <h1 class="error-code">403</h1>
+                        <h4 class="error-title">Acceso Denegado</h4>
+                        <p class="grey-text text-darken-1" style="font-size: 1.2rem; max-width: 500px; margin: 0 auto;">
+                            No tienes los permisos necesarios para acceder a esta página. Contacta al administrador si crees que esto es un error.
+                        </p>
+                        <div style="margin-top: 30px;">
+                            <a href="/dashboard" class="btn btn-large waves-effect waves-light btn-gradient">
+                                <i class="material-icons left">arrow_back</i> Volver al Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/scripts') %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/auth.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar sidenav
+        const sidenavElems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sidenavElems);
+        // Inicializar modals
+        const modalElems = document.querySelectorAll('.modal');
+        M.Modal.init(modalElems);
+        // Inicializar datepicker
+        const dateElems = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(dateElems, {
+            format: 'yyyy-mm-dd',
+            autoClose: true,
+            maxDate: new Date(),
+            yearRange: [1920, new Date().getFullYear() - 10],
+            i18n: {
+                cancel: 'Cancelar',
+                done: 'Aceptar',
+                months: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                monthsShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+                weekdays: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+                weekdaysShort: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],
+                weekdaysAbbrev: ['D','L','M','Mi','J','V','S']
+            }
+        });
+        // Actualizar navbar
+        updateNavbar();
+    });
+</script>
